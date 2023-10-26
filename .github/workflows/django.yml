@@ -12,7 +12,10 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
+
+    - name: Debug step
+      run: echo "The workflow has been triggered and is running!"
+
     - name: Deploy to PythonAnywhere
       env:
         PA_API_TOKEN: ${{ secrets.PA_API_TOKEN }}
