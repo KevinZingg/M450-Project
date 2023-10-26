@@ -1,0 +1,23 @@
+name: Deploy to PythonAnywhere
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Deploy to PythonAnywhere
+      env:
+        PA_API_TOKEN: ${{ secrets.PA_API_TOKEN }}
+        PA_USERNAME: ${{ secrets.PA_USERNAME }}
+      run: |
+        curl -H "Authorization: Token $PA_API_TOKEN" \
+             -X POST \
+             https://www.pythonanywhere.com/api/v0/user/$PA_USERNAME/webapps/KeViZi.pythonanywhere.com/reload/
