@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-q6b6clv0**h9!f6=&i2imuqk6_df(im#mn2ivqlv(p-%)wfob=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kevizi.pythonanywhere.com']
+ALLOWED_HOSTS = ['kevizi.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
