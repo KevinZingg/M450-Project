@@ -16,6 +16,8 @@ class MemberModelTest(TestCase):
         self.assertEqual(member.username, "testuser")
         self.assertEqual(member.joined_date, datetime.date.today())
 
+        # Test
+
 
 class RegisterFormTest(TestCase):
 
